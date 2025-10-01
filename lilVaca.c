@@ -21,7 +21,7 @@ void mostraResumo(int QTDpess){
     
         float carne = calCCarne(QTDpess);
         float media = Xtremo / QTDpess;
-        printf("\n==== RESUMÃO DO CHURRASCO DE GATO ===\n");
+        printf("\n==== RESUMÃO DO CHURRASCO ===\n");
         printf("\nParticipantes: %d\n", QTDpess);
         printf("\nCarne necessaria : %.2f Kg\n", carne);
         printf("Total Arrecadado : R$ %.2f\n", Xtremo);
@@ -34,8 +34,8 @@ void mostraGreed(int QTDpess){
     
         float carne = calCCarne(QTDpess);
         float media = Xtremo / QTDpess;
-        printf("\n==== RESUMÃO DO CHURRASCO DE GATO ===\n");
-        printf("\nVagabundos: %d\n", QTDpess);
+        printf("\n==== RESUMÃO DO CHURRASCASSO DE GATO ===\n");
+        printf("\npedintes: %d\n", QTDpess);
         printf("\nCarne minima : %.2f Kg\n", carne);
         printf("Esmola Arrecadada : R$ %.2f\n", Xtremo);
         printf("Média por miseravel : R$ %.2f\n", media);
@@ -58,8 +58,12 @@ int main(){
     }
 
 
-    if (Xtremo < 100){
+    if (Xtremo > 100){
     
         mostraResumo(pess);
+    }
+    if (Xtremo < 100){
+    
+        mostraGreed(pess);
     }
 }
